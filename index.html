@@ -1,18 +1,41 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Declaracion</title>
-    <link rel="stylesheet" href="estilo.css">
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="contenedor">
-        <p>¿Quieres ser mi novia?</p>
-        <button id="yesBtn">Sí</button>
-        <button id="noBtn">No</button>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>PRINCESA SABES ALGO:</strong>
+                        <p>
+                            Quiero decirte que me gustas, me encantas y me facinas 
+                            demasiado eres unica, perfecta para mis ojos, me haces 
+                            sentir muchas emociones muy lindas que nadie me habia 
+                            podido hacerme sentir. Puedo decir que estoy enamorado 
+                            de absolutamente todo de ti, siempre haz sido y seras tú 
+                            y nadie mas puede hacerme cambiar de opinion. Te amo
+                            como no tienes una idea. Sabes que siempre voy a estar 
+                            para ti y para escucharte mi amada te quiero muchisimo.
+                            ---Para mi preciosa Aida--- 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
     </div>
-    <script src="index.js"></script>
-    
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
 </body>
 </html>
